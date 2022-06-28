@@ -11,7 +11,10 @@ const routes = [
         path: "dev",
         component: () => import("../components/router-view/router-view"),
         children: [
-          
+          {
+            path: 'contact',
+            component: ()=> import('../modules/contact/section-contact.vue')
+        }
         ],
       },
       {

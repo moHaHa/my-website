@@ -1,15 +1,15 @@
 import Vue from "vue";
-
+import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    component: () => import("../app"),
+    component: () => import("../app/App.vue"),
     children: [
       {
         path: "dev",
-        component: () => import("../components/router-view"),
+        component: () => import("../components/router-view/router-view"),
         children: [
           
         ],
@@ -17,7 +17,7 @@ const routes = [
       {
         path: "",
         alias: ['/production', 'main'],
-        component: () => import("../components/router-view"),
+        component: () => import("../components/router-view/router-view.vue"),
         children: [
           
         ],

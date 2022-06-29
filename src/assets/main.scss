@@ -1,10 +1,9 @@
-/* 
-contact reset form colors dark
-
-*/
-// .app-mohammad-webite {
-//   #contact {
-//     .v-input.theme--dark {
-//     }
-//   }
-// }
+// contact
+.app-mohammad-webite {
+  #contact {
+    .contact-link:hover {
+        background-color:var(--v-rich-black-base);
+        transition:all 0.3s ease-in-out 0s ;
+    }
+}
+}

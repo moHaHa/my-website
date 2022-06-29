@@ -1,0 +1,25 @@
+<template>
+  <a :href="link.path"  target="_blanck" class="d-block py-4 rounded-lg px-4 text-decoration-none contact-link" >
+    <div class="d-flex align-center">
+      <div class="me-3"><v-icon x-large >{{link.icon}}</v-icon></div>
+      <div class="d-flex flex-column">
+        <div class="white--text text-h6 font-weight-bold">{{link.title}}</div>
+        <div class="white--text text-caption font-weight-light">{{link.fakePath}}</div>
+      </div>
+    </div>
+  </a>
+</template>
+
+<script>
+export default {
+  props: {
+    link:{
+      type: Object
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

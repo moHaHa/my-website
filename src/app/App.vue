@@ -1,5 +1,5 @@
 <template>
-    <v-app class="rich-black">
+    <v-app class="rich-black app-mohammad-webite">
         <router-view>
     </router-view>
     </v-app>

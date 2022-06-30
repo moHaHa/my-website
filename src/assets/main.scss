@@ -99,6 +99,9 @@
     .theme--dark.v-text-field > .v-input__control > .v-input__slot:before {
         border-color: var(--v-fake-path-button-once-base);
     }
+    .v-text-field.v-input--has-state > .v-input__control > .v-input__slot:before {
+      border-color: currentColor;
+  }
     .contact-link:hover {
       background-color: var(--v-rich-black-base);
       transition: all 0.3s ease-in-out 0s;

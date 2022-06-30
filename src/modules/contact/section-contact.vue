@@ -2,24 +2,24 @@
   <div class="chinese-black" id="contact">
     <v-container>
       <v-row class="text-center py-3 text-h5">
-        <v-col>Let's Talk</v-col>
+        <v-col class="font-BlackBones vodka--text">Let's Talk</v-col>
       </v-row>
-      <v-row class="text-center py-3 text-h3">
-        <v-col>Contact</v-col>
+      <v-row class="text-center py-3 text-h2">
+        <v-col class="font-corpsansrd-cnd font-weight-bold">Contact</v-col>
       </v-row>
       <v-row>
         <v-col cols="12" lg="5">
           <contact-form> </contact-form>
         </v-col>
-        <v-col class="ps-9" cols="12" lg="7">
+        <v-col class="links-col-padding-start-once" cols="12" lg="7">
           <v-row no-gutters dense>
             <v-col class="mb-2 pt-1" cols="12" md="6" v-for="link , idx in links " :key="idx">
               <contact-link :link="link"> 
                 
               </contact-link>
             </v-col>
-            <v-col cols="12" class="pt-1">
-             <!-- <copy-my-email></copy-my-email> -->
+            <v-col cols="12" style="padding-top:2px">
+             <copy-my-email></copy-my-email>
             </v-col>
            
           </v-row>
@@ -32,11 +32,12 @@
 <script>
 import contactForm from "./components/contact-form/contact-form.vue";
 import contactLink from "./components/contact-link/contact-link.vue";
-// import copyMyEmail from './components/'
+import copyMyEmail from './components/copy-my-email/copy-my-email.vue'
 export default {
   components: {
     "contact-form": contactForm,
     "contact-link": contactLink,
+    "copy-my-email": copyMyEmail,
   },
   data(){
     return {
@@ -54,4 +55,13 @@ export default {
 </script>
 
 <style>
+.links-col-padding-start-once {
+  padding-inline-start: 36px !important;
+}
+@media (max-width: 1264px) {
+  .links-col-padding-start-once {
+    padding-inline-start: 12px !important;
+  }
+  
+}
 </style>

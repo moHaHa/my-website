@@ -1,9 +1,107 @@
+// hint font
+@font-face {
+  font-family: "CorpSansRd Cnd";
+  src: url("./fonts/CorpSansRd-BoldCnd.woff2") format("woff2"),
+    url("./fonts/CorpSansRd-BoldCnd.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CorpSansRd Cnd";
+  src: url("./fonts/CorpSansRd-BoldCndIt.woff2") format("woff2"),
+    url("./fonts/CorpSansRd-BoldCndIt.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CorpSansRd Cnd";
+  src: url("./fonts/CorpSansRd-RegularCnd.woff2") format("woff2"),
+    url("./fonts/CorpSansRd-RegularCnd.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CorpSansRd Cnd";
+  src: url("./fonts/CorpSansRd-RegularCndIt.woff2") format("woff2"),
+    url("./fonts/CorpSansRd-RegularCndIt.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CorpSansRd Cnd";
+  src: url("./fonts/CorpSansRd-MediumCnd.woff2") format("woff2"),
+    url("./fonts/CorpSansRd-MediumCnd.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CorpSansRd Cnd";
+  src: url("./fonts/CorpSansRd-MediumCndIt.woff2") format("woff2"),
+    url("./fonts/CorpSansRd-MediumCndIt.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BlackBones";
+  src: url("./fonts/BlackBones.eot");
+  src: url("./fonts/BlackBones.woff2") format("woff2"),
+    url("./fonts/BlackBones.woff") format("woff");
+  font-display: swap;
+}
+  #app.v-application.app-mohammad-webite {
+    .font-BlackBones {
+      font-family: "BlackBones" !important;
+    }
+    .font-corpsansrd-cnd {
+      font-family: "CorpSansRd Cnd" !important;
+    }
+    .v-application  {
+        .text-caption.font-BlackBones,
+        .text-h1.font-BlackBones,
+        .text-h2.font-BlackBones,
+        .text-h3.font-BlackBones,
+        .text-h5.font-BlackBones,
+        .text-h6.font-BlackBones {
+            font-family: "BlackBones" !important;
+        }
+        .text-caption.font-corpsansrd-cnd,
+        .text-h1.font-corpsansrd-cnd,
+        .text-h2.font-corpsansrd-cnd,
+        .text-h3.font-corpsansrd-cnd,
+        .text-h5.font-corpsansrd-cnd,
+        .text-h6.font-corpsansrd-cnd {
+            font-family: "CorpSansRd Cnd" !important;
+        }
+
+    }
+  }
+
 // contact
 .app-mohammad-webite {
   #contact {
-    .contact-link:hover {
-        background-color:var(--v-rich-black-base);
-        transition:all 0.3s ease-in-out 0s ;
+    min-height: 100vh;
+    .theme--dark.v-label {
+        color: var(--v-fake-path-button-once-base);
+        font-family: "CorpSansRd Cnd" !important;
     }
-}
+    .theme--dark.v-text-field > .v-input__control > .v-input__slot:before {
+        border-color: var(--v-fake-path-button-once-base);
+    }
+    .contact-link:hover {
+      background-color: var(--v-rich-black-base);
+      transition: all 0.3s ease-in-out 0s;
+    }
+  }
 }

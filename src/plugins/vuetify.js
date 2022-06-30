@@ -15,6 +15,9 @@ export default new Vuetify({
             "violets-are-blue-light": "#957CFF",
             vodka: "#C0B1FF",
             white: "#FFFFFF",
+            'copy-email-button-once': "#342e31",
+            'fake-path-button-once': "#524e60",
+          
           },
           light:{
             "rich-black": "#090412",
@@ -24,6 +27,8 @@ export default new Vuetify({
             "violets-are-blue-light": "#957CFF",
             vodka: "#C0B1FF",
             white: "#FFFFFF",
+            'copy-email-button-once': "#342e31",
+            'fake-path-button-once': "#524e60",
           }
         },
       },

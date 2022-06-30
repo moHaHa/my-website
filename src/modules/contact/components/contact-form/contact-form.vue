@@ -65,7 +65,7 @@
 </template>
 
 <script>
-// finshed
+// finished
 import axios from "@/axios";
 let matchPeople = function (v) {
   let array = [

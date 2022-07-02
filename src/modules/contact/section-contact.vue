@@ -1,5 +1,6 @@
 <template>
   <div class="chinese-black" id="contact">
+    <my-name></my-name>
     <v-container>
       <v-row class="text-center py-3 text-h5">
         <v-col class="font-BlackBones vodka--text">Let's Talk</v-col>
@@ -33,11 +34,13 @@
 import contactForm from "./components/contact-form/contact-form.vue";
 import contactLink from "./components/contact-link/contact-link.vue";
 import copyMyEmail from './components/copy-my-email/copy-my-email.vue'
+// import myName from './components/my-name/my-name.vue'
 export default {
   components: {
     "contact-form": contactForm,
     "contact-link": contactLink,
     "copy-my-email": copyMyEmail,
+    // "my-name": myName,
   },
   data(){
     return {

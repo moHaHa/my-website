@@ -14,7 +14,7 @@ const routes = [
           {
             path: 'contact',
             component: ()=> import('../modules/contact/section-contact.vue')
-        }
+           }
         ],
       },
       {
@@ -22,7 +22,10 @@ const routes = [
         alias: ['/production', 'main'],
         component: () => import("../components/router-view/router-view.vue"),
         children: [
-          
+          {
+            path: '',
+            component: ()=> import('../modules/contact/section-contact.vue')
+           }
         ],
       },
     ],

@@ -23,7 +23,8 @@ export default {
   methods: {
     copyEmail() {
       this.copied = true;
-      window.navigator.clipboard.writeText('mohammad@mhacd.com')
+      // window.navigator.clipboard.writeText('mohammad@mhacd.com')
+      this.$copyText("mohammad@mhacd.com")
       setTimeout(() => {
         this.copied = false;
       }, 1200);

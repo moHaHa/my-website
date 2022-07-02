@@ -14,6 +14,10 @@ const routes = [
           {
             path: 'contact',
             component: ()=> import('../modules/contact/section-contact.vue')
+           },
+          {
+            path: 'hero',
+            component: ()=> import('../modules/hero/section-hero.vue')
            }
         ],
       },

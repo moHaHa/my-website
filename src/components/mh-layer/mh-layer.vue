@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: 'mh-layer',
   props: {
     zIndex: {
       type: [String, Number],

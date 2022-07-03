@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'mh-fit-pointer',
   props: {
     block: {
       type: [String, Boolean],

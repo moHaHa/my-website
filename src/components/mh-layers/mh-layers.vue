@@ -1,11 +1,12 @@
 <template>
-  <div class="mh-layers" :style="{zIndex: zIndex}">
+  <div class="mh-layers" :style="{ zIndex: zIndex }">
     <slot />
   </div>
 </template>
-
+  
 <script>
 export default {
+  name: "mh-layers",
   props: {
     zIndex: {
       type: [String, Number],

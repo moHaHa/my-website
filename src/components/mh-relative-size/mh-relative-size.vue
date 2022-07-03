@@ -6,18 +6,19 @@
 
 <script>
 export default {
+  name: 'mh-relative-size',
   props: {
     screen: {
-      type: [Boolean],
+      type: Boolean,
       default: () => false,
     },
 
     height: {
-      type: { Number, String },
+      type: [Number, String],
       default: () => "100%",
     },
     width: {
-      type: { Number, String },
+      type: [Number, String],
       default: () => "100%",
     },
   },

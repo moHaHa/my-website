@@ -1,6 +1,6 @@
 <template>
-  <mh-relative-size :height="1200">
-    <mh-layer>
+  <mh-relative-size :height="1300">
+    <mh-layer v-if="false">
       <v-row justify="space-between">
         <v-col cols="1">
           <sub2-crystal></sub2-crystal>
@@ -87,7 +87,7 @@
     <mh-layer>
       
 
-      <v-container  class="pt-12 mt-12">
+      <v-container  class="pt-8 mt-12">
         
         <v-row justify="end">
          
@@ -99,12 +99,62 @@
         </v-row>
       </v-container>
     </mh-layer>
+    <mh-layer>
+      
+
+      <v-container  style="margin-top: 800px;">
+        
+        <v-row  justify="space-around" >
+         
+          <v-col offset="1" cols="3">
+            <div class="pt-10">
+           <rou1-crystal></rou1-crystal>
+            </div>
+          </v-col>
+          <v-col  cols="3">
+            <div class="">
+           <soso-crystal></soso-crystal>
+            </div>
+          </v-col>
+        </v-row>
+        <v-row  justify="center" class="mt-12 pt-12" >
+         
+        
+          <v-col   class="mt-12 pt-12" cols="auto">
+            <div class="">
+           <tall-crystal></tall-crystal>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </mh-layer>
+    <mh-layer>
+      
+
+      <v-container  style="margin-top: 500px;">
+        
+        <v-row  >
+         
+          <v-col offset="1" cols="3">
+            <div class="pt-10">
+           <roro-crystal></roro-crystal>
+            </div>
+          </v-col>
+          <v-col  cols="3">
+            <div class="">
+           <sub-crystal></sub-crystal>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </mh-layer>
   </mh-relative-size>
 </template>
 
 <script>
 import soso from "./crystals/soso-crystal.vue";
 import smsm from "./crystals/smsm-crystal.vue";
+import tall from "./crystals/tall-crystal.vue";
 import sub from "./crystals/sub-crystal.vue";
 import sub2 from "./crystals/sub2-crystal.vue";
 import roro from "./crystals/roro-crystal.vue";
@@ -119,6 +169,7 @@ export default {
     "holo-crystal": holo,
     "roro-crystal": roro,
     "smsm-crystal": smsm,
+    "tall-crystal": tall,
   },
 };
 </script>

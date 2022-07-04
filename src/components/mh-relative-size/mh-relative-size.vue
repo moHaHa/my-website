@@ -1,5 +1,6 @@
 <template>
-  <div class="relative-size" :style="screen ? screenObj : sizeObj">
+  <div v-bind="$attrs"
+      v-on="$listeners" class="relative-size" :style="screen ? screenObj : sizeObj">
     <slot></slot>
   </div>
 </template>

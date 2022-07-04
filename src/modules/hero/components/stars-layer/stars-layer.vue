@@ -1,6 +1,6 @@
 <template>
   <mh-layer>
-    <div id="App2ww">
+    <div>
       <svg id="sky">
         <circle
           v-for="y in 60" 
@@ -70,27 +70,27 @@ export default {
       });
     },
     shootingStars() {
-      this.anime({
-        targets: ["#shootingstars .wish"],
-        easing: "linear",
-        loop: true,
-        delay: (el, i) => 1000 * i,
-        opacity: [
-          {
-            duration: 700,
-            value: "1",
-          },
-        ],
-        width: [
-          {
-            value: "150px",
-          },
-          {
-            value: "0px",
-          },
-        ],
-        translateX: 350,
-      });
+      anime({
+      targets: ["#shootingstars .wish"],
+      easing: "linear",
+      loop: true,
+      delay: (el, i) => 5000 * i,
+      opacity: [
+        {
+          duration: 1000,
+          value: "1"
+        }
+      ],
+      width: [
+        {
+          value: "200px"
+        },
+        {
+          value: "0px"
+        }
+      ],
+      translateX: 550
+    });
     },
     randomRadius() {
       return Math.random() * 0.7 + 0.6;

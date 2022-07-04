@@ -43,6 +43,6 @@ export default {};
 }
 #holo {
     transform: translateX(var(--x)) translateY(var(--y));
-        transition: ease-out 0.7s;
+        transition: ease-out 1s;
 }
 </style>

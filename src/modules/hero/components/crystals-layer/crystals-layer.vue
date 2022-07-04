@@ -64,6 +64,18 @@
         </v-row>
       </v-container>
     </mh-layer>
+    <mh-layer>
+      <v-container style="margin-top: 500px">
+        <v-row justify="end">
+          <v-col class="white--text" offset="1" cols="3">
+            <div>x : {{ x }}</div>
+            <div>y : {{ y }}</div>
+        
+
+          </v-col>
+        </v-row>
+      </v-container>
+    </mh-layer>
   </mh-relative-size>
 </template>
 
@@ -89,19 +101,22 @@ export default {
   },
   data() {
     return {
-      d: undefined,
+      x: undefined,
+      y: undefined,
+      dx: undefined,
+      dy: undefined,
     };
   },
   methods: {
     fun(e) {
-      console.log(e.clientX);
       const d = this.$refs.wrapper.$el.getBoundingClientRect();
-      console.log(d);
-      let x = e.clientX - (d.left + Math.floor(d.width / 2));
-      let y = e.clientY - (d.top + Math.floor(d.height / 2));
-      // // Invert values
-      x = x - x * 2;
-      y = y - y * 2;
+      let x = e.screenX - (d.left + Math.floor(d.width / 2));
+      let y = e.screenY - (d.top + Math.floor(d.height / 2));
+      x = x * -1
+      y = y * -1
+      this.x = x;
+      this.y = y ;
+      
       if (x > 70) {
         document.documentElement.style.setProperty("--x", 70 / 2 + "px");
       }
@@ -120,7 +135,6 @@ export default {
       }
     },
   },
-
 };
 </script>
 

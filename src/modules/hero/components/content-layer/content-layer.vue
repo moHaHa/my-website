@@ -57,7 +57,7 @@
       <v-row>
         <v-col cols="auto">
           <mh-fit-pointer>
-            <v-btn dark class="me-3" color="majorelle-blue"> KNOW ME </v-btn>
+            <v-btn style="border-radius: 10px" dark class="me-3" color="majorelle-blue"> KNOW ME </v-btn>
             <v-btn v-ripple="false" dark plain text depressed color="white">Check My Resume </v-btn>
           </mh-fit-pointer>
         </v-col>

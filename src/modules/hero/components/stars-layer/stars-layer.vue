@@ -30,12 +30,8 @@
 </template>
 
 <script>
-// import rect1 from "./stars/stars-rect1.vue";
 import anime from "animejs";
 export default {
-  components: {
-    // "stars-rect1": rect1,
-  },
   data() {
     return {
       anime,
@@ -74,7 +70,7 @@ export default {
       targets: ["#shootingstars .wish"],
       easing: "linear",
       loop: true,
-      delay: (el, i) => 5000 * i,
+      delay: (el, i) => 4000 * i,
       opacity: [
         {
           duration: 1000,

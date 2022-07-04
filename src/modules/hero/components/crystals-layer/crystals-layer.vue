@@ -64,7 +64,6 @@
         </v-row>
       </v-container>
     </mh-layer>
-   
   </mh-relative-size>
 </template>
 
@@ -103,26 +102,25 @@ export default {
       // // Invert values
       x = x - x * 2;
       y = y - y * 2;
-     if(x > 70) {
-       document.documentElement.style.setProperty("--x", 70 / 2 + "px");
-
-     } if (x< -70) {
-       document.documentElement.style.setProperty("--x", -70 / 8 + "px");
-     } else {
-       document.documentElement.style.setProperty("--x", x / 8 + "px");
-
-     }
-     if(y > 70) {
-       document.documentElement.style.setProperty("--y", 70 / 8 + "px");
-
-     } if (y< - 70) {
-       document.documentElement.style.setProperty("--y", -70 / 8 + "px");
-     } else {
-       document.documentElement.style.setProperty("--y", y / 8 + "px");
-
-     }
+      if (x > 70) {
+        document.documentElement.style.setProperty("--x", 70 / 2 + "px");
+      }
+      if (x < -70) {
+        document.documentElement.style.setProperty("--x", -70 / 8 + "px");
+      } else {
+        document.documentElement.style.setProperty("--x", x / 8 + "px");
+      }
+      if (y > 70) {
+        document.documentElement.style.setProperty("--y", 70 / 8 + "px");
+      }
+      if (y < -70) {
+        document.documentElement.style.setProperty("--y", -70 / 8 + "px");
+      } else {
+        document.documentElement.style.setProperty("--y", y / 8 + "px");
+      }
     },
   },
+
 };
 </script>
 

@@ -1,14 +1,32 @@
 <template>
   <mh-relative-size ref="wrapper" @mousemove="fun($event)" :height="1300">
     <mh-layer>
-      <v-container class="pt-12 mt-12">
+      <v-container class="pt-12">
         <v-row>
           <v-col cols="1">
-            <holo-crystal></holo-crystal>
+            <mh-mouse-moveing-wrapper
+              :reduceX="5"
+              :reduceY="24"
+              :cx="x"
+              :cy="y"
+              :d="50"
+            >
+              <mh-mouse-scale-wrapper>
+                <holo-crystal></holo-crystal>
+              </mh-mouse-scale-wrapper>
+            </mh-mouse-moveing-wrapper>
           </v-col>
           <v-col cols="1">
             <div class="pt-12 mt-6">
-              <sub2-crystal></sub2-crystal>
+              <mh-mouse-moveing-wrapper
+                :reduceX="4"
+                :reduceY="24"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <sub2-crystal></sub2-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
         </v-row>
@@ -19,7 +37,15 @@
         <v-row justify="end">
           <v-col cols="3">
             <div class="pe-2">
-              <smsm-crystal></smsm-crystal>
+              <mh-mouse-moveing-wrapper
+                :reduceX="8"
+                :reduceY="4"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <smsm-crystal></smsm-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
         </v-row>
@@ -30,19 +56,43 @@
         <v-row justify="space-around">
           <v-col offset="1" cols="3">
             <div class="pt-10">
-              <rou1-crystal></rou1-crystal>
+              <mh-mouse-moveing-wrapper
+                :reduceX="7"
+                :reduceY="2"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <rou1-crystal></rou1-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
           <v-col cols="3">
             <div class="">
-              <soso-crystal></soso-crystal>
+              <mh-mouse-moveing-wrapper
+                :reduceX="4"
+                :reduceY="1"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <soso-crystal></soso-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
         </v-row>
         <v-row justify="center" class="mt-12 pt-12">
           <v-col class="mt-12 pt-12" cols="auto">
             <div class="">
-              <tall-crystal></tall-crystal>
+              <mh-mouse-moveing-wrapper
+                :reduceX="5"
+                :reduceY="2"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <tall-crystal></tall-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
         </v-row>
@@ -53,25 +103,29 @@
         <v-row>
           <v-col offset="1" cols="3">
             <div class="pt-10">
-              <roro-crystal></roro-crystal>
+              <mh-mouse-moveing-wrapper
+                :reduceX="5"
+                :reduceY="2"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <roro-crystal></roro-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
           <v-col cols="3">
-            <div class="">
-              <sub-crystal></sub-crystal>
+            <div>
+              <mh-mouse-moveing-wrapper
+                :reduceX="1"
+                :reduceY="2"
+                :cx="x"
+                :cy="y"
+                :d="50"
+              >
+                <sub-crystal></sub-crystal>
+              </mh-mouse-moveing-wrapper>
             </div>
-          </v-col>
-        </v-row>
-      </v-container>
-    </mh-layer>
-    <mh-layer>
-      <v-container style="margin-top: 500px">
-        <v-row justify="end">
-          <v-col class="white--text" offset="1" cols="3">
-            <div>x : {{ x }}</div>
-            <div>y : {{ y }}</div>
-        
-
           </v-col>
         </v-row>
       </v-container>
@@ -110,29 +164,14 @@ export default {
   methods: {
     fun(e) {
       const d = this.$refs.wrapper.$el.getBoundingClientRect();
-      let x = e.screenX - (d.left + Math.floor(d.width / 2));
-      let y = e.screenY - (d.top + Math.floor(d.height / 2));
-      x = x * -1
-      y = y * -1
+      let x = e.clientX - (d.left + Math.floor(d.width / 2));
+      let y = e.clientY - (d.top + Math.floor(d.height / 2));
+      x = x * -1;
+      y = y * -1;
       this.x = x;
-      this.y = y ;
-      
-      if (x > 70) {
-        document.documentElement.style.setProperty("--x", 70 / 2 + "px");
-      }
-      if (x < -70) {
-        document.documentElement.style.setProperty("--x", -70 / 8 + "px");
-      } else {
-        document.documentElement.style.setProperty("--x", x / 8 + "px");
-      }
-      if (y > 70) {
-        document.documentElement.style.setProperty("--y", 70 / 8 + "px");
-      }
-      if (y < -70) {
-        document.documentElement.style.setProperty("--y", -70 / 8 + "px");
-      } else {
-        document.documentElement.style.setProperty("--y", y / 8 + "px");
-      }
+      this.y = y;
+      document.documentElement.style.setProperty("--x", x + "px");
+      document.documentElement.style.setProperty("--y", y + "px");
     },
   },
 };

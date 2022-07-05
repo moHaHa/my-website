@@ -1,6 +1,6 @@
 <template>
   <svg
-    id="holo"
+   
     width="90"
     height="92"
     viewBox="0 0 145 147"
@@ -37,12 +37,5 @@ export default {};
 </script>
 
 <style>
-:root {
-  --y: 0;
-  --x: 0;
-}
-#holo {
-    transform: translateX(var(--x)) translateY(var(--y));
-        transition: ease-out 1s;
-}
+
 </style>

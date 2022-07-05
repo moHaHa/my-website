@@ -12,7 +12,9 @@
               :d="50"
             >
               <mh-mouse-scale-wrapper>
+                 <mh-self-up-down-wrapper :delay="'2s'" :duration="'5s'">
                 <holo-crystal></holo-crystal>
+                 </mh-self-up-down-wrapper>
               </mh-mouse-scale-wrapper>
             </mh-mouse-moveing-wrapper>
           </v-col>
@@ -25,7 +27,11 @@
                 :cy="y"
                 :d="50"
               >
-                <sub2-crystal></sub2-crystal>
+                <mh-mouse-scale-wrapper>
+                  <mh-self-up-down-wrapper>
+                    <sub2-crystal></sub2-crystal>
+                  </mh-self-up-down-wrapper>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
@@ -44,7 +50,11 @@
                 :cy="y"
                 :d="50"
               >
-                <smsm-crystal></smsm-crystal>
+                <mh-mouse-scale-wrapper>
+                  <mh-self-up-down-wrapper :delay="'4s'" :duration="'6s'">
+                    <smsm-crystal></smsm-crystal>
+                  </mh-self-up-down-wrapper>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
@@ -63,7 +73,11 @@
                 :cy="y"
                 :d="50"
               >
-                <rou1-crystal></rou1-crystal>
+                <mh-mouse-scale-wrapper>
+                   <mh-self-up-down-wrapper :delay="'2s'" :duration="'7s'">
+                  <rou1-crystal></rou1-crystal>
+                   </mh-self-up-down-wrapper>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
@@ -76,7 +90,9 @@
                 :cy="y"
                 :d="50"
               >
-                <soso-crystal></soso-crystal>
+                <mh-mouse-scale-wrapper>
+                  <soso-crystal></soso-crystal>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
@@ -91,7 +107,11 @@
                 :cy="y"
                 :d="50"
               >
-                <tall-crystal></tall-crystal>
+                <mh-mouse-scale-wrapper>
+                   <mh-self-up-down-wrapper :delay="'4s'" :duration="'4s'">
+                  <tall-crystal></tall-crystal>
+                   </mh-self-up-down-wrapper>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
@@ -110,7 +130,11 @@
                 :cy="y"
                 :d="50"
               >
-                <roro-crystal></roro-crystal>
+                <mh-mouse-scale-wrapper>
+                   <mh-self-up-down-wrapper :delay="'6s'" :duration="'5s'">
+                  <roro-crystal></roro-crystal>
+                   </mh-self-up-down-wrapper>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>
@@ -123,7 +147,11 @@
                 :cy="y"
                 :d="50"
               >
-                <sub-crystal></sub-crystal>
+                <mh-mouse-scale-wrapper>
+                  <mh-self-up-down-wrapper :delay="'4s'" :duration="'6s'">
+                    <sub-crystal></sub-crystal>
+                  </mh-self-up-down-wrapper>
+                </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
           </v-col>

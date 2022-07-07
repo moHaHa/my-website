@@ -58,9 +58,14 @@ export default {
 </script>
 
 <style>
+#contact {
+  position: relative;
+  z-index: 2;
+}
 .links-col-padding-start-once {
   padding-inline-start: 36px !important;
 }
+
 @media (max-width: 1264px) {
   .links-col-padding-start-once {
     padding-inline-start: 12px !important;

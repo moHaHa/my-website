@@ -28,7 +28,7 @@ const routes = [
         children: [
           {
             path: '',
-            component: ()=> import('../modules/contact/section-contact.vue')
+            component: ()=> import('../views/home/home-view.vue')
            }
         ],
       },

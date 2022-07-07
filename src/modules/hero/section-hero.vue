@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <mh-layers>
+    <div  >
+      <mh-layers >
         <stars-layer> </stars-layer>
         <crystals-layer > </crystals-layer>
         <content-layer > </content-layer>

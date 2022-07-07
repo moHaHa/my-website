@@ -2,7 +2,7 @@
   <mh-layer :zIndex="3">
     <v-container>
       <v-row style="padding-top: 230px">
-        <v-col>
+        <v-col cols="6">
           <div>
             <mh-fit-pointer>
               <hi-folks-once />

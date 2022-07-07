@@ -1,5 +1,5 @@
 <template>
-  <mh-relative-size ref="wrapper" @mousemove="fun($event)" :height="1300">
+  <mh-relative-size ref="wrapper" @mousemove="fun($event)" :height="1300" >
     <mh-layer>
       <v-container class="pt-12">
         <v-row>
@@ -12,9 +12,9 @@
               :d="50"
             >
               <mh-mouse-scale-wrapper>
-                 <mh-self-up-down-wrapper :delay="'2s'" :duration="'5s'">
-                <holo-crystal></holo-crystal>
-                 </mh-self-up-down-wrapper>
+                <mh-self-up-down-wrapper :delay="'2s'" :duration="'5s'">
+                  <holo-crystal></holo-crystal>
+                </mh-self-up-down-wrapper>
               </mh-mouse-scale-wrapper>
             </mh-mouse-moveing-wrapper>
           </v-col>
@@ -74,9 +74,9 @@
                 :d="50"
               >
                 <mh-mouse-scale-wrapper>
-                   <mh-self-up-down-wrapper :delay="'2s'" :duration="'7s'">
-                  <rou1-crystal></rou1-crystal>
-                   </mh-self-up-down-wrapper>
+                  <mh-self-up-down-wrapper :delay="'2s'" :duration="'7s'">
+                    <rou1-crystal></rou1-crystal>
+                  </mh-self-up-down-wrapper>
                 </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
@@ -108,9 +108,9 @@
                 :d="50"
               >
                 <mh-mouse-scale-wrapper>
-                   <mh-self-up-down-wrapper :delay="'4s'" :duration="'4s'">
-                  <tall-crystal></tall-crystal>
-                   </mh-self-up-down-wrapper>
+                  <mh-self-up-down-wrapper :delay="'4s'" :duration="'4s'">
+                    <tall-crystal></tall-crystal>
+                  </mh-self-up-down-wrapper>
                 </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
@@ -131,9 +131,9 @@
                 :d="50"
               >
                 <mh-mouse-scale-wrapper>
-                   <mh-self-up-down-wrapper :delay="'6s'" :duration="'5s'">
-                  <roro-crystal></roro-crystal>
-                   </mh-self-up-down-wrapper>
+                  <mh-self-up-down-wrapper :delay="'6s'" :duration="'5s'">
+                    <roro-crystal></roro-crystal>
+                  </mh-self-up-down-wrapper>
                 </mh-mouse-scale-wrapper>
               </mh-mouse-moveing-wrapper>
             </div>
@@ -158,10 +158,193 @@
         </v-row>
       </v-container>
     </mh-layer>
+    <mh-layer>
+      <v-container style="margin-top: 200px">
+        <v-row>
+          <v-col offset="7">
+            <v-row justify="center">
+              <v-col cols="6">
+                <div class="py-9"></div>
+                <mh-mouse-moveing-wrapper
+                  :reduceX="10"
+                  :reduceY="18"
+                  :transition="'ease-out .7s'"
+                  :cx="x"
+                  :cy="y"
+                  :d="50"
+                >
+                  <v-img :src="back" max-height="175" contain> </v-img>
+                </mh-mouse-moveing-wrapper>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </mh-layer>
+    <mh-layer>
+      <v-container style="margin-top: 100px">
+        <v-row>
+          <v-col offset="7">
+            <v-row>
+              <v-col cols="6" class="d-flex flex-column align-center">
+                <div class="py-9"></div>
+                <mh-mouse-moveing-wrapper
+                  :reduceX="9"
+                  :reduceY="9"
+                  :transition="'ease-out .7s'"
+                  :cx="x"
+                  :cy="y"
+                  :d="50"
+                >
+                  <mh-mouse-scale-wrapper :scale="1.1">
+                    <v-img
+                      :src="topLeft"
+                      style="border-radius: 22px"
+                      class="elevation-24"
+                      max-width="160"
+                      contain
+                    >
+                    <template v-slot>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-col cols="auto">
+                            <div><v-img :src="topLeftIcon" contain :max-height="60"> </v-img></div>
+                            <div class="text-center pt-4 text-h5 font      font-corpsansrd-cnd">
+                              Web
+                            </div>
+                            <div class="text-center  text-h5 font      font-corpsansrd-cnd">
+                              Animation 
+                            </div>
+                          </v-col>
+                        </v-row>
+                      </template>
+                    </v-img>
+                  </mh-mouse-scale-wrapper>
+                </mh-mouse-moveing-wrapper>
+              </v-col>
+              <v-col cols="6" class="d-flex flex-column align-center">
+                <mh-mouse-moveing-wrapper
+                  :reduceX="10"
+                  :reduceY="9"
+                  :transition="'ease-out .7s'"
+                  :cx="x"
+                  :cy="y"
+                  :d="50"
+                >
+                  <mh-mouse-scale-wrapper :scale="1.1">
+                    <v-img :src="topRight" max-width="210 " contain>
+                      <template v-slot>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-col cols="auto">
+                            <div><v-img :src="topRightIcon" contain :max-height="80"> </v-img></div>
+                            <div class="text-center pt-4 text-h5 font      font-corpsansrd-cnd">
+                              Front End 
+                            </div>
+                            <div class="text-center  text-h5 font      font-corpsansrd-cnd">
+                              Development 
+                            </div>
+                          </v-col>
+                        </v-row>
+                      </template>
+                    </v-img>
+                  </mh-mouse-scale-wrapper>
+                </mh-mouse-moveing-wrapper>
+              </v-col>
+              <v-col cols="6">
+                <div class="py-3"></div>
+                <mh-mouse-moveing-wrapper
+                  :reduceX="10"
+                  :reduceY="9"
+                  :transition="'ease-out .7s'"
+                  :cx="x"
+                  :cy="y"
+                  :d="50"
+                >
+                  <mh-mouse-scale-wrapper :scale="1.1">
+                    <v-img :src="bottomLeft" max-width="220" contain>
+                    <template v-slot>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-col cols="auto">
+                            <div><v-img :src="bottomLeftIcon" contain :max-height="80"> </v-img></div>
+                            <div class="text-center pt-4 text-h5 font      font-corpsansrd-cnd">
+                              Web Apps 
+                            </div>
+                          
+                          </v-col>
+                        </v-row>
+                      </template>
+                       </v-img>
+                  </mh-mouse-scale-wrapper>
+                </mh-mouse-moveing-wrapper>
+              </v-col>
+              <v-col cols="6">
+                <mh-mouse-moveing-wrapper
+                  :reduceX="12"
+                  :reduceY="9"
+                  :transition="'ease-out .7s'"
+                  :cx="x"
+                  :cy="y"
+                  :d="50"
+                >
+                  <mh-mouse-scale-wrapper :scale="1.1">
+                    <v-img
+                      :src="bottomRight"
+                      style="border-radius: 28px"
+                      max-width="150"
+                      class="elevation-24"
+                      contain
+                    >
+                    <template v-slot>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-col cols="auto">
+                            <div><v-img :src="bottomRightIcon" contain :max-height="40"> </v-img></div>
+                            <div class="text-center pt-4 text-h6       font-corpsansrd-cnd">
+                             Interaction 
+                            </div>
+                            <div class="text-center  text-h6       font-corpsansrd-cnd">
+                              Design 
+                            </div>
+                          </v-col>
+                        </v-row>
+                      </template>
+                    </v-img>
+                  </mh-mouse-scale-wrapper>
+                </mh-mouse-moveing-wrapper>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </mh-layer>
   </mh-relative-size>
 </template>
 
 <script>
+import topLeft from "./assets/web-animation.svg";
+import topRight from "./assets/front.svg";
+import bottomLeft from "./assets/web-app.svg";
+import bottomRight from "./assets/des.svg";
+import topLeftIcon from './assets/web-animation-icon.svg'
+import topRightIcon from './assets/fe-dev-icon.svg'
+import bottomLeftIcon from './assets/web-app-icon.svg'
+import bottomRightIcon from './assets/interaction_design-icon.svg'
+
+import back from "./assets/back.svg";
 import soso from "./crystals/soso-crystal.vue";
 import smsm from "./crystals/smsm-crystal.vue";
 import tall from "./crystals/tall-crystal.vue";
@@ -183,6 +366,15 @@ export default {
   },
   data() {
     return {
+      topLeft,
+      topLeftIcon,
+      topRight,
+      topRightIcon,
+      bottomLeft,
+      bottomLeftIcon,
+      bottomRight,
+      bottomRightIcon,
+      back,
       x: undefined,
       y: undefined,
       dx: undefined,
@@ -198,8 +390,8 @@ export default {
       y = y * -1;
       this.x = x;
       this.y = y;
-      document.documentElement.style.setProperty("--x", x + "px");
-      document.documentElement.style.setProperty("--y", y + "px");
+      document.documentElement.style.setProperty("--x", x );
+      document.documentElement.style.setProperty("--y", y );
     },
   },
 };

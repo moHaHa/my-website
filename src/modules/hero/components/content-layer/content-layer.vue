@@ -81,7 +81,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" lg="5">
+        <v-col cols="12" lg="4">
           <div class="">
             <v-img :src="imageFrame" :lazy-src="imageFrame" contain>
               <template v-slot>
@@ -131,7 +131,7 @@
             <mh-fit-pointer
               class="font-corpsansrd-cnd  font-weight-light white--text mh-font-size-25"
             >
-              I'm a Front-End Developer located in Turkey. I have a serious
+              I'm a Front-End Developer located in Syria. I have a serious
               passion for UI effects, animations and creating intuitive, dynamic
               user experiences.
             </mh-fit-pointer>
@@ -152,10 +152,12 @@
             <mh-fit-pointer
               class="font-corpsansrd-cnd white--text mh-font-size-25"
             >
-              I've built products for companies and businesses around the globe
-              ranging from marketing websites to complex solutions and
-              enterprise apps with focus on fast, elegant and accessible user
-              experiences.
+             Wait a minute,
+            it seems I'm a good desgin , ya that's cool but 
+            What really interests me is
+            complex web apps, front end libraries, github and open source research 
+
+
             </mh-fit-pointer>
           </div>
           <div class="  mt-auto pb-12">
@@ -165,9 +167,9 @@
             <div class="mt-5">
               
               <mh-fit-pointer>
-                <v-btn rounded color="violets-are-blue-dark"  class="me-3">Vue</v-btn>
-              <v-btn rounded color="violets-are-blue-dark"  class="me-3">Vuex</v-btn>
-              <v-btn rounded color="violets-are-blue-dark"  class="me-3">Vuetify</v-btn>
+                <v-btn rounded color="violets-are-blue-dark" outlined  class="me-3">Vue</v-btn>
+              <v-btn rounded color="violets-are-blue-dark"  outlined class="me-3">every single library built with vue </v-btn>
+              <v-btn rounded color="violets-are-blue-dark"  outlined class="me-3">React</v-btn>
             </mh-fit-pointer>
               </div>
           </div>

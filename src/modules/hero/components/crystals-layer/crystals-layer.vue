@@ -1,5 +1,5 @@
 <template>
-  <mh-relative-size  :height="1700" >
+  <mh-relative-size :height="1700">
     <mh-layer>
       <v-container class="pt-12">
         <v-row>
@@ -197,7 +197,45 @@
                   :d="50"
                 >
                   <mh-mouse-scale-wrapper :scale="1.1">
-                    <v-img
+                    <div>
+                      <mh-img style="border-radius: 22px" class="elevation-24">
+                        <template v-slot:img>
+                          <mhTopLeft :width="160" />
+                        </template>
+                        <template v-slot:content>
+                          <v-row
+                            class="fill-height ma-0"
+                            align="center"
+                            justify="center"
+                          >
+                            <v-col cols="auto">
+                              <div>
+                                <mhTopLeftIcon :height="60" :width="'auto'" />
+                              </div>
+                              <div
+                                class="
+                                  text-center
+                                  pt-4
+                                  text-h5
+                                  font font-corpsansrd-cnd
+                                "
+                              >
+                                Web
+                              </div>
+                              <div
+                                class="
+                                  text-center text-h5
+                                  font font-corpsansrd-cnd
+                                "
+                              >
+                                Animation
+                              </div>
+                            </v-col>
+                          </v-row>
+                        </template>
+                      </mh-img>
+                    </div>
+                    <!-- <v-img
                       :src="topLeft"
                       style="border-radius: 22px"
                       class="elevation-24"
@@ -221,7 +259,7 @@
                           </v-col>
                         </v-row>
                       </template>
-                    </v-img>
+                    </v-img> -->
                   </mh-mouse-scale-wrapper>
                 </mh-mouse-moveing-wrapper>
               </v-col>
@@ -243,12 +281,32 @@
                           justify="center"
                         >
                           <v-col cols="auto">
-                            <div><v-img :src="topRightIcon" contain :max-height="80"> </v-img></div>
-                            <div class="text-center pt-4 text-h5 font      font-corpsansrd-cnd">
-                              Front End 
+                            <div>
+                              <v-img
+                                :src="topRightIcon"
+                                :lazy-src="topRightIcon"
+                                contain
+                                :max-height="80"
+                              >
+                              </v-img>
                             </div>
-                            <div class="text-center  text-h5 font      font-corpsansrd-cnd">
-                              Development 
+                            <div
+                              class="
+                                text-center
+                                pt-4
+                                text-h5
+                                font font-corpsansrd-cnd
+                              "
+                            >
+                              Front End
+                            </div>
+                            <div
+                              class="
+                                text-center text-h5
+                                font font-corpsansrd-cnd
+                              "
+                            >
+                              Development
                             </div>
                           </v-col>
                         </v-row>
@@ -269,22 +327,35 @@
                 >
                   <mh-mouse-scale-wrapper :scale="1.1">
                     <v-img :src="bottomLeft" max-width="220" contain>
-                    <template v-slot>
+                      <template v-slot>
                         <v-row
                           class="fill-height ma-0"
                           align="center"
                           justify="center"
                         >
                           <v-col cols="auto">
-                            <div><v-img :src="bottomLeftIcon" contain :max-height="80"> </v-img></div>
-                            <div class="text-center pt-4 text-h5 font      font-corpsansrd-cnd">
-                              Web Apps 
+                            <div>
+                              <v-img
+                                :src="bottomLeftIcon"
+                                contain
+                                :max-height="80"
+                              >
+                              </v-img>
                             </div>
-                          
+                            <div
+                              class="
+                                text-center
+                                pt-4
+                                text-h5
+                                font font-corpsansrd-cnd
+                              "
+                            >
+                              Web Apps
+                            </div>
                           </v-col>
                         </v-row>
                       </template>
-                       </v-img>
+                    </v-img>
                   </mh-mouse-scale-wrapper>
                 </mh-mouse-moveing-wrapper>
               </v-col>
@@ -305,19 +376,35 @@
                       class="elevation-24"
                       contain
                     >
-                    <template v-slot>
+                      <template v-slot>
                         <v-row
                           class="fill-height ma-0"
                           align="center"
                           justify="center"
                         >
                           <v-col cols="auto">
-                            <div><v-img :src="bottomRightIcon" contain :max-height="40"> </v-img></div>
-                            <div class="text-center pt-4 text-h6       font-corpsansrd-cnd">
-                             Interaction 
+                            <div>
+                              <v-img
+                                :src="bottomRightIcon"
+                                contain
+                                :max-height="40"
+                              >
+                              </v-img>
                             </div>
-                            <div class="text-center  text-h6       font-corpsansrd-cnd">
-                              Design 
+                            <div
+                              class="
+                                text-center
+                                pt-4
+                                text-h6
+                                font-corpsansrd-cnd
+                              "
+                            >
+                              Interaction
+                            </div>
+                            <div
+                              class="text-center text-h6 font-corpsansrd-cnd"
+                            >
+                              Design
                             </div>
                           </v-col>
                         </v-row>
@@ -336,13 +423,16 @@
 
 <script>
 import topLeft from "./assets/web-animation.svg";
+import mhTopLeft from "./assets/web-animation.vue";
+import mhTopLeftIcon from "./assets/web-animation-icon.vue";
+
 import topRight from "./assets/front.svg";
 import bottomLeft from "./assets/web-app.svg";
 import bottomRight from "./assets/des.svg";
-import topLeftIcon from './assets/web-animation-icon.svg'
-import topRightIcon from './assets/fe-dev-icon.svg'
-import bottomLeftIcon from './assets/web-app-icon.svg'
-import bottomRightIcon from './assets/interaction_design-icon.svg'
+import topLeftIcon from "./assets/web-animation-icon.svg";
+import topRightIcon from "./assets/fe-dev-icon.svg";
+import bottomLeftIcon from "./assets/web-app-icon.svg";
+import bottomRightIcon from "./assets/interaction_design-icon.svg";
 
 import back from "./assets/back.svg";
 import soso from "./crystals/soso-crystal.vue";
@@ -355,6 +445,8 @@ import holo from "./crystals/holo-crystal.vue";
 import rou1 from "./crystals/rou1-crystal.vue";
 export default {
   components: {
+    mhTopLeft,
+    mhTopLeftIcon,
     "sub2-crystal": sub2,
     "sub-crystal": sub,
     "soso-crystal": soso,
@@ -366,14 +458,13 @@ export default {
   },
   props: {
     x: {
-      type: [String, Number]
+      type: [String, Number],
     },
     y: {
-      type: [String, Number]
-    }
+      type: [String, Number],
+    },
   },
   data() {
-
     return {
       topLeft,
       topLeftIcon,
@@ -388,7 +479,6 @@ export default {
       // y: undefined,
     };
   },
- 
 };
 </script>
 

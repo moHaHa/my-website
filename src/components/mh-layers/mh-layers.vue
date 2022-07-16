@@ -1,5 +1,6 @@
 <template>
-  <div class="mh-layers" :style="{ zIndex: zIndex }">
+  <div v-bind="$attrs"
+      v-on="$listeners"  class="mh-layers" :style="{ zIndex: zIndex }">
     <slot />
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="chinese-black" id="contact">
-    <my-name></my-name>
+    <!-- <my-name></my-name> -->
     <v-container>
       <v-row class="text-center py-3 text-h5">
         <v-col class="font-BlackBones vodka--text">Let's Talk</v-col>

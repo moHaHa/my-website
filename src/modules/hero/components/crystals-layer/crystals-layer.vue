@@ -1,5 +1,5 @@
 <template>
-  <mh-relative-size ref="wrapper" @mousemove="fun($event)" :height="1300" >
+  <mh-relative-size  :height="1700" >
     <mh-layer>
       <v-container class="pt-12">
         <v-row>
@@ -364,7 +364,16 @@ export default {
     "smsm-crystal": smsm,
     "tall-crystal": tall,
   },
+  props: {
+    x: {
+      type: [String, Number]
+    },
+    y: {
+      type: [String, Number]
+    }
+  },
   data() {
+
     return {
       topLeft,
       topLeftIcon,
@@ -375,25 +384,11 @@ export default {
       bottomRight,
       bottomRightIcon,
       back,
-      x: undefined,
-      y: undefined,
-      dx: undefined,
-      dy: undefined,
+      // x: undefined,
+      // y: undefined,
     };
   },
-  methods: {
-    fun(e) {
-      const d = this.$refs.wrapper.$el.getBoundingClientRect();
-      let x = e.clientX - (d.left + Math.floor(d.width / 2));
-      let y = e.clientY - (d.top + Math.floor(d.height / 2));
-      x = x * -1;
-      y = y * -1;
-      this.x = x;
-      this.y = y;
-      document.documentElement.style.setProperty("--x", x );
-      document.documentElement.style.setProperty("--y", y );
-    },
-  },
+ 
 };
 </script>
 

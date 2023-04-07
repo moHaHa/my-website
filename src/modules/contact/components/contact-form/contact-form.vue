@@ -222,7 +222,7 @@ export default {
       if (this.valid) {
         this.loader = true;
         try {
-          let res = await axios.post("http://hbo30edthree-001-site1.dtempurl.com/api/contact", this.form);
+          let res = await axios.post("https://api.mhacd.com/contact/create.php", this.form);
           if (res.status === 200) {
             this.thanks = "Message sent successfully ";
             this.form = {};

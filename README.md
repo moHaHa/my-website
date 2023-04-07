@@ -16,7 +16,7 @@ npm run build
 ```
 
 ### deploy it 
-upload the files from the genered folder in your `dist` folder to your host file manager 
+upload the genered files from `dist`  folder to your host file manager 
 ```
 
  

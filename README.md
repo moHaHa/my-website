@@ -1,24 +1,39 @@
-# my-personal-website
+# my personal website
 
-## Project setup
+## Install Packages
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### serve the project 
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build it 
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
+### deploy it 
+upload the files from the genered folder in your `dist` folder to your host file manager 
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 
+public_html/
+ --.js 
+ --.css
+ .other files
+ 
+   ^
+   |
+   |
+
+dist/
+  --.js
+  --.css
+  ... other files 
+  
+ 
+```
+

@@ -1,6 +1,6 @@
 # my personal website
 
-## Install Packages
+### Install Packages
 ```
 npm install
 ```
